@@ -1,5 +1,5 @@
 {
-  "name": "simple-shop-new",
+  "name": "blitz-shop",
   "version": "1.0.0",
   "scripts": {
     "start": "blitz start",
@@ -8,12 +8,13 @@
     "test": "echo \"No tests yet\""
   },
   "browserslist": [
-    "defaults"
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 and_chr versions",
+    "last 2 ios_saf versions"
   ],
-  "prettier": {
-    "semi": false,
-    "printWidth": 110
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && pretty-quick --staged",
@@ -27,11 +28,14 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "4.9.12",
+    "@material-ui/icons": "4.9.1",
+    "@material-ui/lab": "4.0.0-alpha.51",
     "@prisma/cli": "2.0.0-beta.4",
     "@prisma/client": "2.0.0-beta.4",
     "blitz": "0.8.1",
-    "react": "experimental",
-    "react-dom": "experimental"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@types/react": "16.9.34",

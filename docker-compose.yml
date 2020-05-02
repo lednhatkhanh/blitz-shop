@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+      POSTGRES_DB: next_shop
+    networks:
+      - postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
